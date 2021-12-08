@@ -27,7 +27,9 @@ const Home = () => {
             </h1>
             <p className="hero__text">
               Calculadora de líneas de transmisión para tres tipos diferentes de
-              líneas como microcinta, coaxial y líneas bifiliares
+              líneas como microcinta, coaxial y líneas bifiliares, utilizando
+              las formulas presentadas por el Dr. Rodolfo Neri Vela en su libro{' '}
+              <b>"Líneas de Transmisión"</b>
             </p>
             <div className="hero__buttons">
               <a href="#microcinta" className="btn btn-secondary">
@@ -79,7 +81,7 @@ const Home = () => {
               dieléctrico.
             </p>
 
-            <Link to="/" className="btn btn-primary">
+            <Link to="/calculadoras/coaxial" className="btn btn-primary">
               Calcular Línea
             </Link>
           </div>
@@ -105,7 +107,7 @@ const Home = () => {
               simétricas tienen pérdidas un orden de magnitud menores que las
               líneas de transmisión coaxiales.
             </p>
-            <Link to="/" className="btn btn-primary">
+            <Link to="/calculadoras/bifilar" className="btn btn-primary">
               Calcular Línea
             </Link>
           </div>

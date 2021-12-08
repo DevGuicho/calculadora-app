@@ -1,5 +1,6 @@
 import { Toaster } from 'react-hot-toast'
 import { Routes, BrowserRouter, Route } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 import Home from '../pages/Home'
 import Calculators from './Calculators'
@@ -14,6 +15,7 @@ function App() {
           <Route path="/calculadoras/*" element={<Calculators />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </>
   )
 }

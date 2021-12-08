@@ -12,6 +12,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html::-webkit-scrollbar {
+  width: 8px; /* Tamaño del scroll en vertical */
+  height: 8px; /* Tamaño del scroll en horizontal */
+  display: none; /* Ocultar scroll */
+}
 
 html {
   font-family: 'Inter', sans-serif;
@@ -127,7 +132,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
   top: 0;
   background-color: var(--gray-color);
 }
@@ -148,8 +153,10 @@ body {
   color: var(--body-fonts-color);
 }
 
-.micro {
+.micro,
+.coaxial__wrapper {
   width: 90%;
+  min-height: 85vh;
   max-width: 1156px;
   margin: 0 auto;
   display: grid;
@@ -204,6 +211,82 @@ body {
   align-items: center;
   width: 110px;
 }
+
+.coaxial__img {
+  width: 250px;
+}
+
+.coaxial__form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coaxial__form .physics__params {
+  border-right: 1px solid gray;
+}
+.coaxial__form .physics__params,
+.coaxial__form .electric__params {
+  flex: 1 1 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.coaxial__form .physics__params div,
+.coaxial__form .electric__params div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+}
+.coaxial__form .physics__params input,
+.coaxial__form .electric__params input,
+.coaxial__form .physics__params select {
+  flex: 1 1 auto;
+}
+.coaxial__frequency {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 8px;
+}
+.coaxial__frequency input {
+  flex: 1 1 auto;
+}
+.calculators__title {
+  max-width: 1156px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: var(--main-color);
+}
+.calculators__options {
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1156px;
+  width: 90%;
+  gap: 24px;
+  margin: 0 auto;
+}
+.calculators__options article a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 17px 1px rgba(0, 0, 0, 0.4);
+  background-color: var(--main-color);
+}
+.calculators__options article img {
+  width: 100%;
+}
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -227,6 +310,20 @@ body {
 }
 .btn.w-full {
   width: 100%;
+}
+.grid__options {
+  min-height: calc(100vh - 120px);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 5px;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+footer p {
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -257,6 +354,10 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
+  }
+  .coaxial__form .physics__params {
+    border-right: none;
+    border-bottom: 1px solid gray;
   }
 }
 
