@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 import mainImg from '../assets/undraw_education_f8ru.svg'
 import microImg from '../assets/microcinta.png'
@@ -10,6 +11,13 @@ import Header from '../components/Header'
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Home | Calculadora de Líneas de Transmisión</title>
+        <meta
+          name="description"
+          content="Calculadora de lineas de transmisión"
+        />
+      </Helmet>
       <Header />
       <section className="hero">
         <div className="hero__container">
@@ -60,7 +68,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="linea" id="microcinta">
+      <section className="linea" id="coaxial">
         <div className="linea__container">
           <div className="linea__info">
             <h2 className="linea__title">Línea de Cable Coaxial</h2>
@@ -78,7 +86,7 @@ const Home = () => {
           <img src={coaxilaImg} alt="linea ilustracion" />
         </div>
       </section>
-      <section className="linea" id="microcinta">
+      <section className="linea" id="bifiliar">
         <div className="linea__container">
           <img src={bifiliarImg} alt="linea ilustracion" />
           <div className="linea__info">

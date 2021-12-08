@@ -115,6 +115,11 @@ body {
   margin: 0 auto;
 }
 .header {
+  position: sticky;
+  top: 0;
+  background-color: var(--gray-color);
+}
+.header__wrapper {
   width: 90%;
   max-width: 1156px;
   margin: 0 auto;
@@ -123,6 +128,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  top: 0;
+  background-color: var(--gray-color);
 }
 .header__title {
   font: bold 20px/30px 'Inter';

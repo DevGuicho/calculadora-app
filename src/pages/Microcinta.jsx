@@ -43,7 +43,9 @@ const Microcinta = () => {
             form.dielectricHeight !== ''
               ? Number(form.dielectricHeight) / 10
               : 2.36 / 10
-        })
+        }),
+        dielectricHeight:
+          form.dielectricHeight !== '' ? Number(form.dielectricHeight) : 2.36
       })
     } else {
       const impedanceZ = impedance({
@@ -115,6 +117,7 @@ const Microcinta = () => {
                 name="permitividadSelect"
                 id="permitividadSelect"
                 onChange={handleChange}
+                value={form.permitividadSelect}
               >
                 <option value="0">Seleccione una opción</option>
                 <option value="4">FR4</option>
